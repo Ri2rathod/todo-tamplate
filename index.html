@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
+  
     <title>Todo</title>
   </head>
   <body>
@@ -18,20 +21,20 @@
         <div class=" text-center mt-4 py-2  m-auto rounded">
             <h1 class="display-5">Todo-list</h1>
         </div>
-        <div class="container-fluid bg-light">
-            <div class="container-md container-fluid  row">
-                <form rm action="#" class="d-flex p-1 col-12">
-                    <input type="text" class="col-10 col-md-10 px-4 " name="input_list" id="" placeholder="Add Task"  id="datetimepicker1">
-                    <div class="  d-flex col-2 ">
-                            <button class="btn btn-success px-auto mx-2"><i class="far fa-calendar-alt fa-2x"></i></button>
-                            <button class="btn btn-primary px-auto mx-2">Add</button>
+        <div class="container-fluid  bg-light">
+            <div class="row">
+                <form autocomplete="off"  action="" class="" method="POST">
+                    <div class="  d-md-flex col-12 d-block ">
+                        <input type="text" class="form-control" name="input_list" id="" placeholder="Add Task"  id="datetimepicker1">
+                        <input type=" text" class="form-control" name="due_data" id="datepicker" placeholder="Due Date">
+                        <button type="submit" class="btn btn-primary px-auto mx-2">Add</button>
                     </div>
                 </form>
             </div>
             <div class="container ">
                 <div class="pt-3">
-                    <form action="" class="  d-flex col-12 col-md-3 ">
-                        <div class="col-6">
+                    <form action="" class="  d-flex justify-content-evenly col-12 col-md-4 ms-auto">
+                        <div class="col-5 ">
                             <label for="" class="my-auto ps-2">Filter</label>
                             <select name="" id="" class="mx-2 form-select">
                                 <option value="">lerom</option>
@@ -39,7 +42,7 @@
                                 <option value="">lerom</option>
                             </select>
                         </div>
-                        <div class="col-6">
+                        <div class="col-5">
                             <label for=" " class="my-auto ps-2">Sort</label>
                             <select name="" id="" class="mx-2 form-select">
                                 <option value="">lerom</option>
@@ -52,10 +55,55 @@
                 <hr class="w-75 m-auto my-4">
                 <div class="pb-5 ">
                     <div class="d-block d-md-flex justify-content-between border-bottom border-1  py-2">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"  class="my-auto mx-auto mx-sm-5"  name="" id="">
+                            <h3 class="w-auto  fs-5">Lorem, ipsum dolor sit</h3>
+                        </div>
+                        <div class="hover-tab my-auto d-flex border border-success rounded-3">
+                            <i class="fas fa-spinner text-primary my-auto p-2 loader"></i>
+                            <span class="my-auto px-2">17 Mar 2021</span>
+                        </div>
+                        <div class="d-flex mx-1 my-2 my-md-0">
+                           <a href="#"><i class="fas fa-info-circle  my-auto px-2 btn btn-secondary mx-auto mx-md-1"></i></a> 
+                           <a href=""><i class="fas fa-trash-alt my-auto px-2 btn btn-danger mx-auto mx-md-1"></i></a> 
+                            <a href=""><i class="fas fa-edit my-auto px-2 btn btn-success mx-auto mx-md-1"></i></a> 
+                        </div>
+                    </div>
+                    <div class="d-block d-md-flex justify-content-between border-bottom border-1  py-2">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"  class="my-auto mx-auto mx-sm-5"  name="" id="">
+                            <h3 class="w-auto  fs-5">Lorem, ipsum dolor sit</h3>
+                        </div>
+                        <div class="hover-tab my-auto d-flex border border-success rounded-3">
+                            <i class="fas fa-check text-success my-auto p-2 "></i>
+                            <span class="my-auto px-2">17 Mar 2021</span>
+                        </div>
+                        <div class="d-flex mx-1 my-2 my-md-0">
+                           <a href="#"><i class="fas fa-info-circle  my-auto px-2 btn btn-secondary mx-auto mx-md-1"></i></a> 
+                           <a href=""><i class="fas fa-trash-alt my-auto px-2 btn btn-danger mx-auto mx-md-1"></i></a> 
+                            <a href=""><i class="fas fa-edit my-auto px-2 btn btn-success mx-auto mx-md-1"></i></a> 
+                        </div>
+                    </div>
+                    <div class="d-block d-md-flex justify-content-between border-bottom border-1  py-2">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"  class="my-auto mx-auto mx-sm-5"  name="" id="">
+                            <h3 class="w-auto  fs-5">Lorem, ipsum dolor sit</h3>
+                        </div>
+                        <div class="hover-tab my-auto d-flex border border-danger rounded-3">
+                            <i class="fas fa-times text-danger my-auto p-2 "></i>
+                            <span class="my-auto px-2">17 Mar 2021</span>
+                        </div>
+                        <div class="d-flex mx-1 my-2 my-md-0">
+                           <a href="#"><i class="fas fa-info-circle  my-auto px-2 btn btn-secondary mx-auto mx-md-1"></i></a> 
+                           <a href=""><i class="fas fa-trash-alt my-auto px-2 btn btn-danger mx-auto mx-md-1"></i></a> 
+                            <a href=""><i class="fas fa-edit my-auto px-2 btn btn-success mx-auto mx-md-1"></i></a> 
+                        </div>
+                    </div>
+                    <!-- <div class="d-block d-md-flex justify-content-between border-bottom border-1  py-2">
                         <input type="checkbox"  class="my-auto mx-5"  name="" id="">
                         <h3 class="w-auto  fs-5">Lorem, ipsum dolor sit</h3>
                         <div class="hover-tab my-auto d-flex border border-success rounded-3">
-                            <i class="fas fa-spinner my-auto p-2 loader"></i>
+                            <i class="fas fa-check my-auto p-2 "></i>
                             <span class="my-auto px-2">17 Mar 2021</span>
                         </div>
                         <div class="d-flex mx-1 my-2 my-md-0">
@@ -63,7 +111,7 @@
                             <i class="fas fa-trash-alt my-auto px-2 btn btn-danger mx-auto mx-md-1"></i>
                             <i class="fas fa-edit my-auto px-2 btn btn-success mx-auto mx-md-1"></i>
                         </div>
-                    </div>
+                    </div> -->
                     
                    
                 </div>
@@ -79,5 +127,12 @@
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+</body>
 </html>

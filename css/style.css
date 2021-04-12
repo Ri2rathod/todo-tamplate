@@ -8,6 +8,9 @@ input[type="checkbox"]
 nav{
     border-radius: 50px !important;
 }
+form{
+    display: flex;
+}
 .hover-tab{
     opacity: 0.5 !important;
 }
